@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="header">
+        <a class="logo" href="#">AMWAY</a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="topselling.html">Top Selling</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <a href="#" id="close"><i class="fa-regular fa-circle-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Offers!!</h4>
+            <p>Get E-mail about our latest Products and <span>special offers</span></p>
+        </div>
+        <div class="newssearch">
+            <input type="text" id="email" placeholder="Your Email address">
+            <button class="normal" id="signupButton">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <h2 class="logo">AMWAY</h2>
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> GOkuldham society, Powdwe gali, Goregaon West, Mumbai, 123456</p>
+            <p><strong>Phone:</strong> +01 123 456 / +91 789 000</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Fri</p>
+            <div class="follow">
+                <h4>Follow Us On</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-square-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Term and Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View cart</a>
+            <a href="#">My Achivements</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="copyright">
+            <p>@2023 www.amway.com</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('signupButton').addEventListener('click', function() {
+            const emailInput = document.getElementById('email').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailPattern.test(emailInput)) {
+                alert('Responce is sended to your email ID!!');
+                window.location.href = 'index.html'; 
+            } else {
+                alert('Please enter a valid email address.'); 
+            }
+        });
+    </script>
+</body>
+</html>

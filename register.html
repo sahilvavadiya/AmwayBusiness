@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("C:/Users/dell/OneDrive/Desktop/loginpage.image.jpeg"); 
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat; 
+            color: #fff; 
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        h3 {
+            color: #343a40;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="registerForm" onsubmit="return registerform()" action="index.html">
+                    <h3 class="text-center mb-4">Create an Account</h3>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" required>
+                        <span class="error" id="usernameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <span class="error" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                        <span class="error" id="passwordError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" required>
+                        <span class="error" id="confirmPasswordError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" class="form-control" id="phone" required>
+                        <span class="error" id="phoneError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Select Your Gender</label><br>
+                        <input type="radio" name="gender" value="Male" required> Male<br>
+                        <input type="radio" name="gender" value="Female" required> Female<br>
+                        <input type="radio" name="gender" value="Other" required> Other<br>
+                        <span class="error" id="genderError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button><br>
+                </form>        
+            </div>
+        </div>
+    </div>
+    <script>
+        function registerform() {
+            // Reset errors
+            var errors = document.getElementsByClassName('error');
+            for (var i = 0; i < errors.length; i++) {
+                errors[i].innerText = '';
+            }
+            
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            var phone = document.getElementById('phone').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            
+            var valid = true;
+            
+            // Username validation
+            if (!/^[a-zA-Z]+$/.test(username)) {
+                document.getElementById('usernameError').innerText = 'Username must be 3-15 characters and contain no special characters.';
+                valid = false;
+            }
+            
+            // Email validation
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById('emailError').innerText = 'Enter a valid email address.';
+                valid = false;
+            }
+            
+            // Password validation
+            if (password.length < 6) {
+                document.getElementById('passwordError').innerText = 'Password must be at least 6 characters long.';
+                valid = false;
+            }
+            
+            // Confirm password validation
+            if (password !== confirmPassword) {
+                document.getElementById('confirmPasswordError').innerText = 'Passwords do not match.';
+                valid = false;
+            }
+            
+            // Phone validation
+            if (!/^\d{10}$/.test(phone)) {
+                document.getElementById('phoneError').innerText = 'Phone number must be a 10-digit number.';
+                valid = false;
+            }
+            
+            // Gender validation
+            if (!gender) {
+                document.getElementById('genderError').innerText = 'Please select gender.';
+                valid = false;
+            }
+            if (isValid) {
+                alert('Registraion successful!');
+                window.location.href = 'index.html'; 
+            } 
+            return valid;
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

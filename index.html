@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="header">
+        <a class="logo"href="#"></i> AMWAY</a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="topselling.html">Top Selling</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</li>
+                <li id="lg-bag">
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <section id="hero">
+        <div>
+            <span><img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\image1.png"></span>
+            <span><img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\image2.png"></span>
+            <span><img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\image3.png"></span>
+            <span><img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\image4.png"></span>
+            <span><img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\image5.png"></span>
+        </div>
+        <script>
+            let scrollContainer = document.querySelector(".hero");
+            let backBtn = document.getElementById("backBtn");
+            let nextBtn = document.getElementById("nextBtn");
+
+            scrollContainer.addEventListener("wheel",(evt) => {
+                evt.preventDefault();
+                scrollContainer.scrollLeft += evt.deltaY;
+            });
+        </script>
+    </section>
+    
+    
+        <section id="products" class="section-p1">
+            <h2>Discover Our Products</h2>
+        </section>
+    <section id="feature" class="section-p1">
+        <div class="feature-box">
+               <img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\Screenshot 2024-10-06 161259.png"alt="feature">
+               <h6>Nutritions</h6>
+        </div>
+        <div class="feature-box">
+            <img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\Screenshot 2024-10-06 161307.png"alt="feature">
+            <h6>Beauty Products</h6>
+     </div>
+     <div class="feature-box">
+        <img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\Screenshot 2024-10-06 161313.png"alt="feature">
+        <h6>Home and Living</h6>
+ </div>
+ <div class="feature-box">
+    <img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\Screenshot 2024-10-06 161408.png"alt="feature">
+    <h6>Skin Care</h6>
+</div>
+    </section> 
+
+    <section id="products" class="section-p1">
+        <h2>Get Ready..</h2><br>
+        <p>To Start Your Own Earning..</p>
+        <p>Start Your Business With <b>AMWAY</b></p>
+        <div class="pro-container">
+            <div class="pro1">
+                <img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\image3.png"> 
+            </div>
+            <div class="pro1">
+                <img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\image1.png">
+            </div>
+            <div class="pro1">
+                <img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\Screenshot 2024-10-06 161158.png">
+            </div>
+            <div class="pro1">
+                <img src="C:\Users\dell\OneDrive\Desktop\WT PROJECT FILE\images\Screenshot 2024-10-06 161244.png">
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Offers!!</h4>
+            <p>Get E-mail about our latest Products and <span>special offers</span></p>
+        </div>
+        <div class="newssearch">
+            <input type="text" placeholder="Your Email address">
+            <button class="normal">SignUp</button>
+        </div>
+    </section>
+ <footer class="section-p1">
+    <div class="col">
+        <h2 class="logo"></i>AMWAY</h2>
+        <h4>Contact</h4>
+        <p><strong>Address : </strong>GOkuldham socity, Powdwe gali,Goregou West,Mumbai,123456</p>
+        <p><strong>Phone : </strong> +01 123 456 / +91 789 000</p>
+        <p><strong>Hours : </strong>10:00 - 18:00,Mon - Fri</p>
+        <div class="follow">
+            <h4>Follow Us On</h4>
+            <div class="icon">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-youtube"></i>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delievery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Term and Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View cart</a>
+            <a href="#">My Achivments</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="copyright">
+            <p>@2023 www.amway.com</p>
+        </div>
+ </footer>
+    <script src="index.js"></script>
+</body>
+</html>
